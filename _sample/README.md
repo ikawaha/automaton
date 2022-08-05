@@ -7,7 +7,7 @@
 
 ドドスコスコスコを3回繰り返した入力を受理するオートマトンを構成する。
 
-![image](https://user-images.githubusercontent.com/4232165/182422799-e5f10bb2-4397-42b7-a9f7-ac962c7ad74e.png)
+![image](https://user-images.githubusercontent.com/4232165/183117217-984e734e-9928-4878-99f6-56cbdb38f597.png)
 
 
 ---

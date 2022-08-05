@@ -10,5 +10,6 @@ You can plug in processing while the automaton is running, so it can be used as 
 
 See [sample](./_sample) for details.
 
+![image](https://user-images.githubusercontent.com/4232165/183117217-984e734e-9928-4878-99f6-56cbdb38f597.png)
 ---
 MIT
