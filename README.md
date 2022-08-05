@@ -8,7 +8,7 @@ Input to the automaton can also be sent through channels.
 
 You can plug in processing while the automaton is running, so it can be used as a transformer rather than as an accepting automaton.
 
-See [sample](./_sample/README.md) for details.
+See [sample](./_sample) for details.
 
 ---
 MIT
