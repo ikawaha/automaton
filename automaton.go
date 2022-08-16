@@ -2,7 +2,10 @@ package automaton
 
 import (
 	"context"
+	_ "embed"
 	"fmt"
+	"io"
+	"text/template"
 )
 
 // Option sets an option to the automaton.
@@ -90,4 +93,20 @@ func (a *Automaton[T]) Run(ctx context.Context, in <-chan T, insertion func(p St
 			return false, nil
 		}
 	}
+}
+
+//go:embed graph.tpl
+var graphT string
+var graphTpl = template.Must(template.New("fsa").Parse(graphT))
+
+func (a *Automaton[T]) Dot(w io.Writer) error {
+	return graphTpl.Execute(w, struct {
+		Start      State
+		Transition Transition[T]
+		FinalState StateSet
+	}{
+		Start:      a.start,
+		Transition: a.transition,
+		FinalState: a.finalState,
+	})
 }
