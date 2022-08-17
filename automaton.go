@@ -99,6 +99,7 @@ func (a *Automaton[T]) Run(ctx context.Context, in <-chan T, insertion func(p St
 var graphT string
 var graphTpl = template.Must(template.New("fsa").Parse(graphT))
 
+// Dot writes the automaton graph in graphviz dot format.
 func (a *Automaton[T]) Dot(w io.Writer) error {
 	return graphTpl.Execute(w, struct {
 		Start      State
