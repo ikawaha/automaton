@@ -1,0 +1,35 @@
+digraph finite_state_automaton {
+  layout = circo;
+  rankdir = LR;
+  fontname="sans-serif"
+  node [shape=circle, fontname="sans-serif"];
+  edge [fontname="sans-serif"];
+
+   s0 -> s1  [label="しか"];  s0 -> s0  [label="" style=dotted]; s1 -> s1  [label="しか"];
+   s1 -> s2  [label="のこ"];  s1 -> s0  [label="" style=dotted]; s1 -> s1  [label="しか"];
+   s2 -> s3  [label="のこ"];  s2 -> s0  [label="" style=dotted]; s2 -> s1  [label="しか"];
+   s3 -> s4  [label="のこ"];  s3 -> s0  [label="" style=dotted]; s3 -> s1  [label="しか"];
+   s4 -> s5  [label="こし"];  s4 -> s0  [label="" style=dotted]; s4 -> s1  [label="しか"];
+   s5 -> s6  [label="たん"];  s5 -> s0  [label="" style=dotted]; s5 -> s1  [label="しか"];
+   s6 -> s7  [label="たん"];  s6 -> s0  [label="" style=dotted]; s6 -> s1  [label="しか"];
+
+   s7 ->  s8  [label="しか"];   s7 -> s0  [label="" style=dotted]; s7 -> s1  [label="しか"];
+   s8 ->  s9  [label="のこ"];   s8 -> s0  [label="" style=dotted]; s8 -> s1  [label="しか"];
+   s9 -> s10  [label="のこ"];   s9 -> s0  [label="" style=dotted]; s9 -> s1  [label="しか"];
+  s10 -> s11  [label="のこ"];  s10 -> s0  [label="" style=dotted]; s10 -> s1  [label="しか"];
+  s11 -> s12  [label="こし"];  s11 -> s0  [label="" style=dotted]; s11 -> s1  [label="しか"];
+  s12 -> s13  [label="たん"];  s12 -> s0  [label="" style=dotted]; s12 -> s1  [label="しか"];
+  s13 -> s14  [label="たん"];  s13 -> s0  [label="" style=dotted]; s13 -> s1  [label="しか"];
+
+  s14 -> s15  [label="しか"];  s14 -> s0  [label="" style=dotted]; s14 -> s1  [label="しか"];
+  s15 -> s16  [label="のこ"];  s15 -> s1  [label="" style=dotted]; s15 -> s1  [label="しか"];
+  s16 -> s17  [label="のこ"];  s16 -> s1  [label="" style=dotted]; s16 -> s1  [label="しか"];
+  s17 -> s18  [label="のこ"];  s17 -> s1  [label="" style=dotted]; s17 -> s1  [label="しか"];
+  s18 -> s19  [label="こし"];  s18 -> s1  [label="" style=dotted]; s18 -> s1  [label="しか"];
+  s19 -> s20  [label="たん"];  s19 -> s1  [label="" style=dotted]; s19 -> s1  [label="しか"];
+  s20 -> s21  [label="たん"];  s20 -> s1  [label="" style=dotted]; s20 -> s1  [label="しか"];
+
+
+  s0 [label="s0" shape=circle];
+  s21 [shape=ellipse, peripheries=2];
+}
